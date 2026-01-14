@@ -1,0 +1,23 @@
+name: Testes Funcionais
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+
+jobs:
+  funcional:
+    runs-on: ubuntu-latest
+
+    env:
+      DB_PASSWORD: ${{ secrets.DB_TOKEN }}
+
+    container:
+      image: maven:4.0.0-rc-5-amazoncorretto-21-debian
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Executar testes Maven
+        run: mvn clean test
