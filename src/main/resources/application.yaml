@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:postgresql://pg-1d1a8803-asilvadesa-7b61.c.aivencloud.com:21713/defaultdb
-    username: avnadmin
-    password: ${DB_TOKEN}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:

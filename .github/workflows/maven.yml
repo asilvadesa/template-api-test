@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      DB_PASSWORD: ${{ secrets.DB_TOKEN }}
+      DB_USER: ${{ secrets.USER }}
+      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
 
     container:
       image: maven:4.0.0-rc-5-amazoncorretto-21-debian
