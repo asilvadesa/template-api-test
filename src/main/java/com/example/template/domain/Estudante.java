@@ -23,16 +23,10 @@ public class Estudante {
     @Column(name = "documento")
     private String documento;
 
-    @Column(name = "data_nascimento")
-    private Date dataNascimento;
-
     @Column(name = "nome_pai")
     private String nomePai;
 
     @Column(name = "nome_mae")
     private String nomeMae;
-
-    @Column(name = "criado_em")
-    private LocalDateTime dataCriacao;
 
 }
