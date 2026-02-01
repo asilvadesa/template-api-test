@@ -1,6 +1,6 @@
-package com.example.template;
+package com.example.template.testes;
 
-import com.example.template.factory.EnderecoDataFactory;
+import com.example.template.factory.GenerateDataFactory;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,7 @@ import static org.hamcrest.Matchers.notNullValue;
 class TemplateApiTestApplicationTests {
 
 	@Autowired
-	private EnderecoDataFactory enderecoDataFactory;
+	private GenerateDataFactory enderecoDataFactory;
 
 	@Test
 	void validaBuscaCepComSucesso() {
@@ -30,6 +30,11 @@ class TemplateApiTestApplicationTests {
 			body("city", notNullValue()).
 		when().
 			get("https://brasilapi.com.br/api/cep/v1/{cep}");
+	}
+
+	@Test
+	void validaBuscaFilmeSecondaryDataSource(){
+		System.out.println(enderecoDataFactory.buscaTodosFilmes());
 	}
 
 }

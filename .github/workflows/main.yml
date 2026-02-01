@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  funcional:
+  regression-testing:
     runs-on: ubuntu-latest
 
     env:
